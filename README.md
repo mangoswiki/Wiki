@@ -11,7 +11,7 @@
 **User Guides**
 ----
 
-* [**Installation Guides**](wiki/MaNGOS_Installation.md)  
+* [**Installation Guides**](https://github.com/mangoswiki/Wiki/MaNGOS_Installation.md)  
 * [**MaNGOS Maintenance**](wiki/MaNGOS_Maintenance)
 
 **Official Test Servers**  
