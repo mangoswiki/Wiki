@@ -11,7 +11,7 @@
 **Table of Contents**
 ----
 
-* [**Table of Contents**](http://github.com/mangoswiki/Wiki/Home)  
+* [**Table of Contents**](http://github.com/mangoswiki/Wiki/wiki/Home)  
 
 ---
 ####Brought to you by ![http://getmangos.com/images/mangos_foundation.png](http://getmangos.com/images/mangos_foundation.png)
