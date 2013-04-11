@@ -8,7 +8,13 @@
 * [**Official MaNGOS Community Forum**](http://getmangos.com/bb/)  
 * [**Official MaNGOS IRC Network**](http://getmangos.com#IRC)
 
-**Table of Contents**
+**Official Test Servers**  
+----
+
+* [**ProjectZero Server**](http://project-zero.eu/) - Test server for Vanilla World of Warcraft, build from MangosZero
+
+
+**Main Wiki**
 ----
 
 * [**Table of Contents**](http://github.com/mangoswiki/Wiki/wiki/Home)  
