@@ -21,4 +21,3 @@
 
 ---
 ####Brought to you by ![http://getmangos.com/images/mangos_foundation.png](http://getmangos.com/images/mangos_foundation.png)
-Brought to you by ![http://github.com/mangoswiki/Wiki/blob/master/mangosfoundation.png](http://github.com/mangoswiki/Wiki/blob/master/mangosfoundation.png)
