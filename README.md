@@ -5,14 +5,7 @@
 ----
 
 * [**Official MaNGOS Site**](http://getmangos.com/)  
-* [**Official MaNGOS Community Forum**](http://getmangos.com/bb/)  
-* [**Official MaNGOS IRC Network**](http://getmangos.com#IRC)
-
-**Official Test Servers**  
-----
-
-* [**ProjectZero Server**](http://project-zero.eu/) - Test server for Vanilla World of Warcraft, build from MangosZero
-
+* [**Official MaNGOS Community Forum**](http://community.getmangos.co.uk/)  
 
 **Main Wiki**
 ----
@@ -20,4 +13,4 @@
 * [**Table of Contents**](http://github.com/mangoswiki/Wiki/wiki/Home)  
 
 ---
-####Brought to you by ![http://getmangos.com/assets/img/home/mangos_foundation.png](http://getmangos.com/assets/img/home/mangos_foundation.png)
+####Brought to you by [![Mangos Foundation](http://getmangos.com/assets/img/home/mangos_foundation.png)](http://getmangos.com/)
