@@ -13,4 +13,4 @@
 * [**Table of Contents**](http://github.com/mangoswiki/Wiki/wiki/Home)  
 
 ---
-####Brought to you by [![Mangos Foundation](https://getmangos.eu/assets/img/home/mangos_foundation.png)](https://getmangos.eu/)
+####Brought to you by [![Mangos Foundation](http://getmangos.eu/assets/img/home/mangos_foundation.png)](https://getmangos.eu/)
