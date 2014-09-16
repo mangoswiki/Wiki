@@ -9,8 +9,14 @@
 
 **Main Wiki**
 ----
+The wiki is currently being rebuilt and is at the following location:
 
-* [**Table of Contents**](http://github.com/mangoswiki/Wiki/wiki/Home)  
+* [**MaNGOS Wiki**](http://getmangos.eu/wiki)  
+
+<br />
+The Old wiki will remain here for a while until the new wiki is signed off
+
+ [**Old Wiki**](http://github.com/mangoswiki/Wiki/wiki/Home)  
 
 ---
 Proudly brought to you by:
