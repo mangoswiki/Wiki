@@ -3,7 +3,7 @@
 ----
 **Main Wiki**
 ----
-The wiki is currently being rebuilt and is at the following location:
+The wiki is located at the following location:
 
 * [**MaNGOS Wiki**](http://getmangos.eu/wiki)  
 
