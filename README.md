@@ -3,7 +3,7 @@
 ----
 **Main Wiki**
 ----
-The wiki is located at the following location:
+For browsing the Wiki, it is located at the following location:
 
 * [**MaNGOS Wiki**](http://getmangos.eu/wiki)  
 
