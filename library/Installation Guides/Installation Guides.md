@@ -6,6 +6,10 @@ The Following guides outline the Install procedures for first time Installs of M
 <br/>
 If you're looking to Upgrade or otherwise maintain a currently operating installation of MaNGOS, Please refer to our [Update Guides](/wiki/Installation%20Guides/Update%20Guides.md).
 
+
+####General Guides
+* [**Cloning the Repos**](/wiki/Installation%20Guides/General/Cloning%20the%20Repos.md)
+
 ####Linux
 * [**Updated Ubuntu guide**](/wiki/Installation%20Guides/Linux/Updated-guide-for-Ubuntu-Linux-series-13.10-using-Lubuntu.md)
 * [**Linux Generic**](/wiki/Installation%20Guides/Linux/Linuxinstall.md)  

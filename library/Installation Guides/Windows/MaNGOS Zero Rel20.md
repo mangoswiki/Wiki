@@ -7,7 +7,7 @@
  
 (without using repacks)
 
-# **PLEASE NOTE**<br /> - THIS IS ONLY FOR MANGOSZERO REL20
+# **PLEASE NOTE**<br /> - THIS IS ONLY FOR *REL20* BRANCHES
 
 This document will explain how to setup a MaNGOS World of Warcraft Server on Windows from Scratch.
 
@@ -90,22 +90,6 @@ Git is a package used by the MaNGOS team to control the source files for MaNGOS.
 
 2)      Click the option ‘Git Bash Here’ and continue on using the default values.
 
-##Setting up the MaNGOS server Databases
-1)      Open SQLyog and connect to the databases
-
-2)      Right Click on “root@localhost” and select ‘Create Database’
-
-3)      Type “Mangos” into the Database name field, then click “Create”
-
-4)      Right Click on “root@localhost” and select ‘Create Database’
-
-5)      Type “Characters” into the Database name field, then click “Create”
-
-6)      Right Click on “root@localhost” and select ‘Create Database’
-
-7)      Type “Realmd” into the Database name field, then click “Create”
-
-
 ##Downloading the MaNGOS Source Code
 
 1)   Open ‘My Computer’ and open ‘Local Disk (C :)’
@@ -118,7 +102,7 @@ Git is a package used by the MaNGOS team to control the source files for MaNGOS.
 
 5)   Type: 
 
-    git clone --recursive http://github.com/mangoszero/server.git
+    git clone --recursive http://github.com/mangoszero/server.git -b Rel20
 The **--recursive** in the above command is very important! Without it compiling will fail.
 
 6)   .... This will take a while
@@ -128,22 +112,23 @@ The **--recursive** in the above command is very important! Without it compiling
 ##Downloading and Importing the Database Data
 1)   Type: 
 
-    git clone --recursive http://github.com/mangoszero/database.git
+    git clone --recursive http://github.com/mangoszero/database.git -b Rel20
 
 **.... This will take a while**
 
-    cd server/sql
-    Installer_DB.cmd
+    cd ..
+    cd database
+    InstallDatabases.bat
 
-This will ask you to select the database options you want and then after asking for Server Name, Username & Password will set up the databases.
 
-    cd ../..
-    cd database/_tools
-    MaNGOSdb_Installer.bat
+By Default the Installer will Create and Populate the Realm, Character and World databases. Will it also load a fully populated world Database, these options can be changed using the on-screen options.
 
-2) You will be asked for the Server Name, Username and password for the mysql database.
+Press N to move onto the next step.
 
-The MaNGOS Databases have now been populated with data
+2) You will be asked for the Server Name, Username and password for the mysql database, plus the names of the databases and ports for mysql.
+- The defaults for all of theses are shown in brackets.
+
+Once complete, the MaNGOS Databases will have been populated with data
 
 
 ##Extracting Game Data
