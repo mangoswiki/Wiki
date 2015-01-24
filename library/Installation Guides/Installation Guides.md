@@ -11,6 +11,7 @@ If you're looking to Upgrade or otherwise maintain a currently operating install
 * [**Linux Generic**](/wiki/Installation%20Guides/Linux/Linuxinstall.md)  
 * Debian [*English*](/wiki/Installation%20Guides/Linux/Debianinstall.md) [*Deutsch*](/wiki/Installation%20Guides/Linux/Debianinstall-German.md) [*Español*](/wiki/Installation%20Guides/Linux/Debianinstall-spanish.md)
 * [**Ubuntu**](/wiki/Installation%20Guides/Linux/Ubuntuinstall.md)
+* [**Centos 7**]((/wiki/Installation%20Guides/Linux/Centos_7_en.md)
 * [**Gentoo**](/wiki/Installation%20Guides/Linux/Gentooinstall.md)
 * [**Debian in Virtualbox**](/wiki/Installation%20Guides/Linux/Debian%20in%20VirtualBox%20as%20Windows%207%2064%20Bit%20as%20the%20host.md)
 

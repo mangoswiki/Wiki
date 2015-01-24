@@ -1,3 +1,8 @@
+[![](/wiki/icons/home.gif)](/wiki/Home.md) 
+[![](/wiki/icons/back.gif)](/wiki/Installation%20Guides/Installation%20Guides.md) 
+
+----------
+
 #Compiling and Installing on Centos 7
 
 First off I made a Tutorial for Debian based distros specifically Ubuntu located [here](http://ubuntuforums.org/showthread.php?t=1964479). This guide is actually pretty old and with the new updates to the servers I thought it was time to re build my Tutorial. Now I can hear you saying "But the thread title says Centos 7", and indeed you would be correct. For this particular guide I will be using a Red Hat Variation namely CentOS. Before we get started lets run through the basics:
