@@ -2,7 +2,9 @@
 [![](/wiki/icons/back.gif)](/wiki/Installation%20Guides/Installation%20Guides.md) 
 
 ----------
-The server needs certain files from the client to run. The extraction process on windows is different from the one on unix systems. **The extracted files are identical on all systems, once extracted they can be used on every operating system.**
+The server needs certain files from the client to run. The extraction process on windows is different from the one on unix systems.
+
+**The extracted files are identical on all systems, once extracted they can be used on every operating system.**
 
 ## Extracting the game assets
 
@@ -26,10 +28,11 @@ In the first step you have to compile the tools for extracting.  The source file
 #### Compiling
 
 There are four needed binarys for extracting all the Client-Data that we need: 
-* **ad** is for extracting dbcs (Database files of the client) and the maps.
-* **vmap_extractor** is for extracting model data out of the clients archives.
-* **vmap_assembler** creates the correct "vmap" files MaNGOS needs.
-* **MoveMapGen** creates a movement map to have mobs not walk through walls etc, not necessary to have.
+
+* **map-extractor** is for extracting dbcs (Database files of the client) and the maps.
+* **vmap-extractor** is for extracting model data out of the clients archives.
+* **vmap-assembler** creates the correct "vmap" files MaNGOS needs.
+* **MoveMap-Generator** creates a movement map to have mobs not walk through walls etc, not necessary to have.
 
 First compile libmpq which is needed, _skip this step when you're with mangos-three (Cataclysm)_ :
 
@@ -44,7 +47,7 @@ Then compile "ad":
     cmake .
     make
 
-then copy the binary **ad** from the current directory to your WoW-Folder:
+then copy the binary **map-extractor** from the current directory to your WoW-Folder:
 
     cp ad /path/to/wow
 
@@ -54,34 +57,34 @@ Next, you'll need to compile stormlib:
     cmake .
     make
 
-After that, compile the vmap_extractor with the commands:
+After that, compile the **vmap-extractor** with the commands:
 
     cd ~/server/contrib/vmap_extractor
     cmake .
     make
 
-then copy the file **vmapextractor** from the directory **vmapextract** into your WoW-Folder:
+then copy the file **vmap-extractor** from the directory **vmap-extract** into your WoW-Folder:
 
     cp vmapextract/vmapextractor /path/to/wow
 
-As last step do the same thing with the vmap_assembler:
+As last step do the same thing with the vmap-assembler:
 
     cd ~/server/contrib/vmap_assembler
     cmake .
     make
 
-after compiling copy the binary **vmap_assembler** to your WoW-Folder:
+after compiling copy the binary **vmap-assembler** to your WoW-Folder:
 
     cp vmap_assembler /path/to/wow
 
-Now lets compile and copy **MoveMapGen** to the same folder:
+Now lets compile and copy **MoveMap-Generator** to the same folder:
 
     cd ~/src/contrib/mmap/
     cmake .
     make
     cp MoveMapGen /path/to/wow
 
-If you run into trouble when running make you could refer to http://github.com/mangoswiki/Wiki/wiki/Frequently-Asked-Questions under the heading typical compile problems.
+If you run into trouble when running make you could refer to http://getmangos.eu/wiki/Tutorials/Frequently%20Asked%20Questions.md under the heading typical compile problems.
 
 ### Running the tools
 After you copied the compiled tools to your WoW base Directory you can run them in this order:
@@ -129,4 +132,6 @@ Click start, type cmd in the search bar and do shift+ctrl+enter to run it as adm
 
 Move the dbc, maps and vmaps folders to your server's data folder. Find mangosd.conf, edit DataDir to your current data folder's path (where dbc, maps and vmaps are located).
 
-Note that this does NOT extract the movement maps like is described in the Linux section. The MoveMapGen.sh script is supposed to be run on Linux under the bash shell, but works on a windows machine if run from a cygwin terminal. If you're not even vaguely a programmer, the script runs MoveMapGen.exe once for each of the integer map ids stored within the script as MAP_LIST_A, MAP_LIST_B, MAP_LIST_C, MAP_LIST_D in the script. This could be done manually, but you'd be insane to try it. If you run into an runtime error regarding msvcp110.dll while extracting movement maps, you likely need to install a code library contained within Visual C++ Redistributable for Visual Studio 2012 Update 3, which can be downloaded from [www.microsoft.com/en-us/download/details.aspx?id=30679](www.microsoft.com/en-us/download/details.aspx?id=30679).
+Note that this does NOT extract the movement maps like is described in the Linux section. The MoveMapGen.sh script is supposed to be run on Linux under the bash shell, but works on a windows machine if run from a cygwin terminal. If you're not even vaguely a programmer, the script runs MoveMapGen.exe once for each of the integer map ids stored within the script as MAP_LIST_A, MAP_LIST_B, MAP_LIST_C, MAP_LIST_D in the script. This could be done manually, but you'd be insane to try it.
+
+If you run into an runtime error regarding msvcp110.dll while extracting movement maps, you likely need to install a code library contained within Visual C++ Redistributable for Visual Studio 2012 Update 3, which can be downloaded from [www.microsoft.com/en-us/download/details.aspx?id=30679](www.microsoft.com/en-us/download/details.aspx?id=30679).
