@@ -17,23 +17,20 @@ It seems that mangos use an old tbb library version (2.2), so I dont try to use 
 MaNGOSZero for Classic
 
     git clone --recursive http://github.com/mangoszero/server.git
+    cd server
     git clone --recursive http://github.com/mangoszero/database.git database    
 
-MaNGOSOne for TBC5
+MaNGOSOne for TBC
 
     git clone --recursive http://github.com/mangosone/server.git
     cd server
     git clone --recursive http://github.com/mangosone/database.git database    
-    cd src/bindings
-    git clone --recursive http://github.com/mangosone/scripts.git
 
 MaNGOSTwo for WoTLK
 
     git clone --recursive http://github.com/mangostwo/server.git
     cd server
     git clone --recursive http://github.com/mangostwo/database.git database    
-    cd src/bindings
-    git clone --recursive http://github.com/mangostwo/scripts.git
 
 MaNGOSThree for Cataclysm
 

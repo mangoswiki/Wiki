@@ -31,14 +31,14 @@ The server and database folders then contain the contents of each repo.
 
 ##Cloning a specific branch of the repos
 
-If you want the try out the latest development work in progress, they are available. In these examples I will use a branch called Rel20
+If you want the try out the latest development work in progress, they are available. In these examples I will use a branch called develop21
 
 Server Sourcecode
 
-    git clone https://github.com/mangoszero/server.git --recursive -b Rel20
+    git clone https://github.com/mangoszero/server.git --recursive -b develop21
 
 Database
 
-    git clone https://github.com/mangoszero/database.git --recursive -b Rel20
+    git clone https://github.com/mangoszero/database.git --recursive -b develop21
 
 The server and database folders then contain the contents of each repo for this branch.

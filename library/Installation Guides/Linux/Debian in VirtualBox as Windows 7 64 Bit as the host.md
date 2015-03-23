@@ -112,8 +112,8 @@ While you are in user mode and not root, create the mangos source directory
 cd ~
 mkdir mangos-source
 cd mangos-source
-git clone --recursive -b Rel20 https://github.com/mangoszero/server
-git clone --recursive -b Rel20 https://github.com/mangoszero/database
+git clone --recursive https://github.com/mangoszero/server
+git clone --recursive https://github.com/mangoszero/database
 </pre>
 
 Be sure to use the '''--recursive''' so git will pull in everything, without this your compile will fail

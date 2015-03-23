@@ -102,7 +102,7 @@ Git is a package used by the MaNGOS team to control the source files for MaNGOS.
 
 5)   Type: 
 
-    git clone --recursive http://github.com/mangoszero/server.git -b Rel20
+    git clone --recursive http://github.com/mangoszero/server.git 
 The **--recursive** in the above command is very important! Without it compiling will fail.
 
 6)   .... This will take a while
@@ -112,7 +112,7 @@ The **--recursive** in the above command is very important! Without it compiling
 ##Downloading and Importing the Database Data
 1)   Type: 
 
-    git clone --recursive http://github.com/mangoszero/database.git -b Rel20
+    git clone --recursive http://github.com/mangoszero/database.git 
 
 **.... This will take a while**
 
