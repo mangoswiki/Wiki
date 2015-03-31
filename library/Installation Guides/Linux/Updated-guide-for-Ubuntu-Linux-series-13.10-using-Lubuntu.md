@@ -245,11 +245,11 @@ Edit these to look like:
  `./mangosd`
 
  You may have an error similar to this:
-
+<pre>
 [A] You have: --> 12738_01_mangos_spell_template.sql
 
 [B] You need: --> 12752_01_mangos_reputation_spillover_template.sql
-
+</pre>
 
 Simply go back to your source directory where the sql file updates are located:
 

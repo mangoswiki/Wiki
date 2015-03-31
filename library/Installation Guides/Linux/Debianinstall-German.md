@@ -12,7 +12,9 @@ Diese Anleitung ist für diejenigen, die es vorziehen, die überlegene Stabilit�
 ### 1. Das Abholen der Abhängigkeiten.
 Mangos benötigt einige Anwendungen um korrekt kompilieren und laufen zu können. Diese zu installieren ist dank dem Paketmanager apt einfach. Es muss nur folgende Zeile als super user ausgeführt werden:
 
-    apt-get install build-essential gcc g++ automake git-core autoconf make patch libmysql++-dev mysql-server libtool libssl-dev grep binutils zlibc libc6 libbz2-dev cmake
+<pre>
+sudo apt-get install apache2 cmake cmake-qt-gui git g++ libace-ssl-dev libace-dev libapache2-mod-php5 libbz2-dev libmysql++-dev libmysqlclient-dev libssl-dev libtbb-dev make mysql-client mysql-common mysql-server php5-mysql libtbb-dev libtbb2 zlib1g-dev vim libtbb-dev
+</pre>
 
 Der mysql-server wird eine eigene kurze Installationsroutine starten in der man ein Passwort vergeben muss. Dieses unbedingt merken!
 

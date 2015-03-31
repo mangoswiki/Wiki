@@ -156,7 +156,7 @@ So if you receive an error about directory permissions, use:
 
  `sudo make install`
 
-## Adding the 4 Mangos databases and using Mysql
+## Adding the 3 Mangos databases and using Mysql
 Mangos uses the Mysql database server software for all of the databases. It is fast and efficient with wide support. Although you installed the Mysql software, there is a chance that it is not running. To verify that it is running on the system at this time, use:
 
  `service mysqld status`
@@ -183,36 +183,26 @@ Type your Mysql password and you have entered the Mysql console where commands c
  `CREATE DATABASE `mangos` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; `
  `CREATE DATABASE `characters` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; `
  `CREATE DATABASE `realmd` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
- `CREATE DATABASE `scriptdev2` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;`
 
  After each command, Mysql should return: Query OK, 1 row affected (0.00 sec) 
 
 You can verify the creation of the databases by using this command: `show databases;`
 Now type exit to leave the Mysql console.
 
-To fill the datebases with the base structures, use these commands from the /<mangos source>/sql/ directory, entering your Mysql password each time.
+To fill the datebases with the base structures, use these commands from the /<mangos database>/ directory, entering your Mysql password each time.
 
- `mysql -u root -h localhost -p realmd < realmd.sql `
- `mysql -u root -h localhost -p characters < characters.sql `
- `mysql -u root -h localhost -p mangos < mangos.sql`
+ `mysql -u root -h localhost -p realmd < Realm/Setup/realmdLoadDB.sql `<br/>
+ `mysql -u root -h localhost -p characters < Character/Setup/characterLoadDB.sql `
 
-The scriptdev2.conf.dist.in must be copied to your Mangos binary etc directory. 
+First, make the make_full_WorldDB.sh file executable.
 
-`cp scriptdev2.conf.dist.in /<whatever you put for -DCMAKE_INSTALL_PREFIX>/etc/scriptdev2.conf`
+ `chmod +x make_full_WorldDB.sh`
+ Now, execute the script: `./make_full_WorldDB.sh`
 
+If all goes well, this will create a mangos world database .sql file.
+- Now load this data into the dtaabase.
 
-Finally, the last database involves filling up the world and adding the necessary updates!
-
-`cd /home/`<mangos source code>/`database`
-
-You will be using the install_linux.sh tool or the one that I wrote called mangosdb.sh. My tool may not yet be available in the github but you can find it easily on the forums! Both of these tools requires you to edit them and add your specific Mysql username and password. Use vim install_linux.sh to edit, or use your favorite Linux CLI text editor, so that your variables match your system. That is, your Mysql username and password. 
-
-First, make the install_linux.sh or mangosdb.sh file executable.
-
- `chmod +x install_linux.sh`
- Now, execute the script: `./install_linux.sh`
-
-If all goes well, all of the world database items will fill up the mangosd database! However, you may need to add more files from the /home/`<mangos source code>/`sql/updates directory! You find that out when you first run the mangos server.
+ `mysql -u root -h localhost -p mangos < full_db.sql`
 
 ## Editing the mangosd.conf, realmd.conf and scriptdev2.conf files
 Before the last step of running the server and determining which updates to add, the mangosd.conf, realmd.conf and scriptdev2.conf files must be edited to match your system and use the options of your choosing. These files are located in the directory that you choose under the -DCMAKE_INSTALL_PREFIX option in a subdirectory called etc.
@@ -239,9 +229,7 @@ Edit these to look like:
 
 Simply go back to your source directory where the sql file updates are located:
 
-`cd /<mangos source files>/sql/updates`
-
-My mangosdb.sh tool allows you to copy the specific updates to its update directory or you can simply use the following commands to update each file:
+`cd /<mangos database files>/sql/updates`
 
 `mysql -u root -h localhost -p mangos < 12741_01_mangos.sql `
 

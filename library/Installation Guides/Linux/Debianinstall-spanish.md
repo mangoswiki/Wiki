@@ -12,7 +12,9 @@ Wiki en español traducida de la versión inglesa, y con resumen de acciones a s
 ###1. Consiguiendo las dependencias.
 Mangos Necesita un número de aplicaciones para compilar y ejecutar correctamente. Se pueden instalar con cualquier gestor de paquetes apt por ejemplo. Simplemente ejecuta esto como super usuario o root:
 
-    apt-get install build-essential gcc g++ automake git-core autoconf make patch libmysql++-dev mysql-server libtool libssl-dev grep binutils zlibc libc6 libbz2-dev cmake
+<pre>
+sudo apt-get install apache2 cmake cmake-qt-gui git g++ libace-ssl-dev libace-dev libapache2-mod-php5 libbz2-dev libmysql++-dev libmysqlclient-dev libssl-dev libtbb-dev make mysql-client mysql-common mysql-server php5-mysql libtbb-dev libtbb2 zlib1g-dev vim libtbb-dev
+</pre>
 
 mysql-server se ejecutará como un pequeño demonio y te preguntará por una clave de root y otras cosas, no olvides las contraseñas.
 

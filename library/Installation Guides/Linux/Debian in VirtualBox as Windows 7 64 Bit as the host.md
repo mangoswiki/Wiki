@@ -61,7 +61,7 @@ deb-src http://security.debian.org/ wheezy/updates main
 ### Installing the Development headers
 
 <pre>
-sudo apt-get install -y libace-dev libbz2-dev libmysqlclient-dev libncurses5-dev libreadline-dev libssl-dev zlib1g-dev
+sudo apt-get install apache2 cmake cmake-qt-gui git g++ libace-ssl-dev libace-dev libapache2-mod-php5 libbz2-dev libmysql++-dev libmysqlclient-dev libssl-dev libtbb-dev make mysql-client mysql-common mysql-server php5-mysql libtbb-dev libtbb2 zlib1g-dev vim libtbb-dev
 </pre>
 
 ### Map Extraction
