@@ -4,124 +4,149 @@
 
 ----------
 
-This guide is for Debian-based distributions. It can be used as a reference for other distros but you need to go the extra mile yourself. The only difference should be how you get the required packages.
+This guide is for ALL Debian-based distributions.
 
 ##Intro
-This guide is for those who would prefer to use the superior stability and resource management of Linux, or simply cannot use Windows for various reasons. While the current Linux sticky guide is a great source of information, there are a few nuances it fails to mentions and the aim of this thread is to address those. This guide will be largely similar, but will hopefully be more up to date with a few of the changes in the repositories. This guide is written with the complete beginner in mind, and as such might state the obvious on occasion.
+This guide is for those who would prefer to use the superior stability and resource management of Linux, or simply cannot use Windows for various reasons.
+While the current Linux sticky guide is a great source of information, there are a few nuances it fails to mentions and the aim of this thread is to
+address those. This guide will be largely similar, but will hopefully be more up to date with a few of the changes in the repositories. This guide
+is written with the complete beginner in mind, and as such might state the obvious on occasion.
 
 ###1. Fetching the dependencies.
-Mangos needs a number of applications to be able to compile and run properly. Getting those is easy with a simple application of the apt package manager. Just run the following line as super user:
-
-<pre>
-sudo apt-get install apache2 cmake cmake-qt-gui git g++ libace-ssl-dev libace-dev libapache2-mod-php5 libbz2-dev libmysql++-dev libmysqlclient-dev libssl-dev libtbb-dev make mysql-client mysql-common mysql-server php5-mysql libtbb-dev libtbb2 zlib1g-dev vim libtbb-dev
-</pre>
+Mangos needs a small number of packages to be able to compile and run properly. Getting those is easy with a simple application of the apt package manager. Just run the following line as super user:
+    sudo apt-get update
+    sudo apt-get install cmake cmake-qt-gui git g++ gcc make libace-ssl-dev libace-dev libbz2-dev libmysql++-dev libmysqlclient-dev libssl-dev
+    sudo apt-get install mysql-client mysql-common mysql-server zlib1g-dev vim autoconf libtool screen
 
 mysql-server will run a short and simple installation daemon of its own and ask for a root password among other things. Make sure to remember it.
 
-If you are unable to download some of these packages, try **sudo apt-get update** to bring aptitude's repositories up to date. If it still fails after that, it is possible that one of these packages is missing for a variety of reasons. You can try **apt-cache search** *package* (note that apt-cache does not require super user privileges) and look for those packages by name.
-
-###2. The mangos user (Optional)
-You might want to create a  new user with which to run your mangos server. It is not advised to run the server (and a lot of other things) as root.
-
+###2. The mangos user (NOT optional)
+You MUST create a new user with which to run your mangos server on. It is not advised to run the server (and a lot of other things) as root.
+We are going to use the username 'mangos' for an example, you can use any username you want but you will need to replace mangos with your username in all paths.
     adduser mangos
 
-And follow the prompts. A quicker, less verbose way to do this is
+This will create a new user with the name mangos under the folder /home/mangos by default.
+If you would prefer your private server to run in another folder, make sure to give your user privileges to that folder.
+Example:
+    chown -R mangos:mangos /path/to/folder
 
-    useradd mangos
-    passwd mangos
-
-This will create a new user with the name mangos and with owner privileges on /home/mangos by default. This is where I run my server, because the account is not used for anything else. If you would prefer your private server to run in another folder, make sure to give your mangos user owner privileges to that folder.
-
-    chown /your/folder/here mangos
-
-And when you're done setting that up, switch to the user
-
-    su mangos
+And when you're done setting that up, you're going to switch to the user so we can begin the install process.
+    su - mangos
 
 
 ###3. Getting the Mangos source
-There's a lot of mangos versions to choose from. 
+There are several mangos versions to choose from.
 
-This guide will use the master mangos project (Cataclysm) and if you're looking to host another xpac, simply change the github links to reflect that.
+This guide will use MaNGOS Zero(classic) as an example. If you choose to use another version, you can simply just change the cloning URL to the version you would like.
+This step is documented at the page: [**Cloning the Repos**](Cloning-the-Repos)
 
 Make sure you're in the right folder and then fetch the server, database and ScriptDev2 sources. ScriptDev2 needs to be in server/src/bindings
-
-    git clone --recursive http://github.com/mangosthree/server.git
-    git clone --recursive http://github.com/mangosthree/database.git
+    git clone --recursive https://github.com/mangoszero/server.git
+    git clone --recursive https://github.com/mangoszero/database.git
 
 ###4. Compiling the server source
-
-Go to your server folder, create a new directory in which to build the project, and navigate to that. Note that ~/ is a relative path to the current user's home directory. 
-
+Now create the build directory in your server folder. Note that ~/ is a relative path to the current user's home directory.
     cd ~/server
     mkdir build
     cd build
 
-Build the server, specifying where it will be installed to after compiling. This can take about 5 minutes. Note that ".." is a constant for the parent directory. Doing "cmake .." in /home/mangos/server/build is the same as doing "cmake /home/mangos/server". The -DPREFIX= argument specifies where the server will be installed. Change it accordingly.
-
-    cmake .. -DPREFIX=/home/mangos/
+Build the server, specifying where it will be installed to after compiling. This may take a few minutes. Note that "../" is a constant for the parent directory.
+The -DPREFIX= argument specifies where the server will be installed. Change it accordingly.
+    cmake ../ -DPREFIX=/home/mangos/
     or 
-    cmake .. -DCMAKE_INSTALL_PREFIX=/home/mangos/
+    cmake ../ -DCMAKE_INSTALL_PREFIX=/home/mangos/
     make
     make install
+
 
 ###5. Extracting the game assets
 This step is documented at the page: [**Extract Game Assets**](Extracting-Game-Assets)
 
-###6. SQL batch magic
-Mangos uses SQL databases to store just about a million things. It also comes with a number of batch scripts to build the required databases for you. You will be using the "mysql -u root -p" command a lot. This command essentially lets you run mysql queries from the command line. The -u parameter specifies which user to apply the query as (in this case, root), and the -p parameter is necessary if your user has a password. Keep in mind -p by itself works and you don't need to do "mysql -u root -p qwerty123" or whatever your password is!
+###6. Importing the MySQL Database
+First, we are going to create the databases and user for each database. Here you can familiarize yourself with mysql operations.
+To enter mysql, we will need to login as root:
+    mysql -u root -p
 
-Note that these .sql files would probably work with a gui mysql application such as phpmyadmin or navicat. 
+After you login there should be a mysql> prompt, here we will enter the following:
+    create database realmd;
+    create database mangos;
+    create database characters;
+    GRANT ALL PRIVILEGES ON realmd.* TO mangos@'127.0.0.1' IDENTIFIED BY 'mangos';
+    GRANT ALL PRIVILEGES ON mangos.* TO mangos@'127.0.0.1' IDENTIFIED BY 'mangos';
+    GRANT ALL PRIVILEGES ON characters.* TO mangos@'127.0.0.1' IDENTIFIED BY 'mangos';
+    flush privileges;
 
-Start with the files in server/sql. This will create the three databases Mangos uses and build the table structures.
+When finished, just type in 'quit'. Please note there needs to be ; after each line entered for MySQL to recognize the command.
 
-    cd /home/mangos/server/sql
-    mysql -u root -p < create_mysql.sql
-    mysql -u root -p realmd < realmd.sql
-    mysql -u root -p characters < characters.sql
-    mysql -u root -p mangos < mangos.sql
+Now we can import the databases for realmd, mangos and characters. This can be done easily through mysql using the ROOT password that was setup earlier.
+    mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdCreateDB.sql
+    mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdLoadDB.sql
+    mysql -u root -p characters < /home/mangos/database/Character/Setup/characterCreateDB.sql
+    mysql -u root -p characters < /home/mangos/database/Character/Setup/characterLoadDB.sql
+    mysql -u root -p mangos < /home/mangos/database/World/Setup/mangosdCreateDB.sql
+    mysql -u root -p mangos < /home/mangos/database/World/Setup/mangosdLoadDB.sql
 
-ScriptDev2 also needs its own database.
-
-    cd /home/mangos/server/src/bindings/scripts/sql
-    mysql -u root -p < scriptdev2_create_database.sql
-    mysql -u root -p scriptdev2 < scriptdev2_create_structure_mysql.sql
-    mysql -u root -p scriptdev2 < scriptdev2_script_full.sql
+Let's make sure the world database is updated fully:
+    cat /home/mangos/database/World/Update/(current Release)/*.sql >> /home/mangos/all.sql
+    mysql -u root -p mangos < /home/mangos/all.sql
 
 Now you need to populate the databases. This includes quests, dialog, etc. There is a script that will compile a massive number of sql files into one big sql batch you can apply at once.
-
     cd /home/mangos/database
-    bash make_full_db.sh
+    bash make_full_WorldDB.sh
     mysql -u root -p mangos < full_db.sql
-
-Depending on when you are reading this, the server might need a few "updates" applied to it without which the world server will refuse to run. I needed to do this with mangoszero but not mangostwo. Do this step if you get an error at runtime. 
-
-    cd /home/mangos/server/sql/updates
-    mysql -u root -p mangos < blahblahblah_mangos_whatever.sql
-
-Repeat for every similar .sql file in the folder. Mangos might not be the appropriate database for this every time.
 
 ###7. Configuration
 This step is documented at the page: [**Configuration Files**](Configuration-Files)
 
 ###8. Running the server and creating an Admin account
 Your binaries will be located in the bin folder of your server's root directory. Those are mangosd realmd.
-
 mangosd is the world server and realmd is the realm server. Typically you only need one instance of realmd running, and one mangosd instance for every realm you want in your realmlist.
 
-If you want to run these servers using screen, use these scripts, courtesy of krampf. Make sure to chmod +x them.
+If you would lke your server to run on auto restart scripts, add the following to each individual file in your server root directory.
+Make this file: mangos_check.sh
+    while true; do
+    cd /home/mangos/server/bin
+    ./realmd
+    wait
+    done
+Make this file: realmd_check.sh
+    while true; do
+    cd /home/mangos/server/bin
+    ./mangos
+    wait
+    done
+Make this file: realmd.sh
+    SESSION="realmd"
+    DAEMON="screen -d -m -S $SESSION /home/mangos/server/realmd_check.sh"
+    screen -r $SESSION -ls -q 2>&1 >/dev/null
+    echo -e ""
+    echo "Realmd has been launched into the background."
+    echo -e ""
+    if [ $? -le 10 ]; then
+    echo "Restarting $DAEMON"
+    $DAEMON
+    fi
+    wait
+Make this file: mangosd.sh
+    SESSION="mangos"
+    DAEMON="screen -d -m -S $SESSION /home/mangos/server/mangos_check.sh"
+    screen -r $SESSION -ls -q 2>&1 >/dev/null
+    echo -e ""
+    echo "Mangos World has been launched into the background."
+    echo -e ""
+    if [ $? -le 10 ]; then
+    echo "Restarting $DAEMON"
+    $DAEMON
+    fi
+    wait
 
-    #!/bin/sh
-    cd /home/mangos/bin
-    screen -A -m -d -S mangosworld ./mangosd
+Be sure to chmod +x each file, then you will just run ./realmd and ./mangosd in your server directory.
 
-    #!/bin/sh
-    cd /home/mangos/bin
-    screen -A -m -d -S mangosrealm ./realmd
-
-Make sure to run ./mangosd normally once, because you'll need to create your account and give it admin privileges. Run these commands in the mangos command shell.
-
+Also make sure to run ./mangosd in server/bin/ normally once, so you can create your account and give it admin privileges.
+Run these commands in the mangos command shell.
     account create "username" "password"
     account set gmlevel "username" 3
 
-And here you go! A functional, partially scripted private server for you to mess around with. Have fun.
+
+That's it! A functional, partially scripted private server for you to mess around with. Have fun.
+If you encounter any issues with the tutorial, please join our forums and explain the problem.
