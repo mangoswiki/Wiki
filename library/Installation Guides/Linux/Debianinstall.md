@@ -1,5 +1,5 @@
 [![](/wiki/icons/home.gif)](/wiki/Home.md) 
-[![](/wiki/icons/back.gif)](/wiki/Installation%20Guides/General/Cloning%20the%20Repos.md) 
+[![](/wiki/icons/back.gif)](/wiki/Installation%20Guides/Installation%20Guides.md) 
 · Other Versions(old): [**Deutsch**](/wiki/Installation%20Guides/Linux/Debianinstall-German.md)  [**Español**](/wiki/Installation%20Guides/Linux/Debianinstall-spanish.md)
 
 ----------
@@ -49,7 +49,7 @@ And when you're done setting that up, you're going to switch to the user so we c
 There are several mangos versions to choose from.
 
 This guide will use MaNGOS Zero(classic) as an example. If you choose to use another version, you can simply just change the cloning URL to the version you would like.
-This step is documented at the page: [**Cloning the Repos**](Cloning-the-Repos)
+This step is documented at the page: [**Cloning the Repos**](/wiki/Installation%20Guides/General/Cloning%20the%20Repos.md)
 
 Make sure you're in the right folder and then fetch the server, database and extras.
     
