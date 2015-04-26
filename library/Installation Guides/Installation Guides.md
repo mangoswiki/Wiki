@@ -11,10 +11,8 @@ If you're looking to Upgrade or otherwise maintain a currently operating install
 * [**Cloning the Repos**](/wiki/Installation%20Guides/General/Cloning%20the%20Repos.md)
 
 ####Linux
-* [**Updated Ubuntu guide**](/wiki/Installation%20Guides/Linux/Updated-guide-for-Ubuntu-Linux-series-13.10-using-Lubuntu.md)
 * [**Linux Generic**](/wiki/Installation%20Guides/Linux/Linuxinstall.md)  
-* Debian [*English*](/wiki/Installation%20Guides/Linux/Debianinstall.md) [*Deutsch*](/wiki/Installation%20Guides/Linux/Debianinstall-German.md) [*Español*](/wiki/Installation%20Guides/Linux/Debianinstall-spanish.md)
-* [**Ubuntu**](/wiki/Installation%20Guides/Linux/Ubuntuinstall.md)
+* [**Debian/Ubuntu**](/wiki/Installation%20Guides/Linux/Debianinstall.md)
 * [**Centos 7**](/wiki/Installation%20Guides/Linux/Centos_7_en.md)
 * [**Gentoo**](/wiki/Installation%20Guides/Linux/Gentooinstall.md)
 * [**Debian in Virtualbox**](/wiki/Installation%20Guides/Linux/Debian%20in%20VirtualBox%20as%20Windows%207%2064%20Bit%20as%20the%20host.md)
