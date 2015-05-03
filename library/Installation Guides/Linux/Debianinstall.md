@@ -83,6 +83,7 @@ Now we can import the databases for realmd, mangos and characters. This can be d
     
     mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdCreateDB.sql
     mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdLoadDB.sql
+	mysql -u root -p realmd < /home/mangos/database/Tools/updateRealm.sql
     mysql -u root -p characters < /home/mangos/database/Character/Setup/characterCreateDB.sql
     mysql -u root -p characters < /home/mangos/database/Character/Setup/characterLoadDB.sql
     mysql -u root -p mangos < /home/mangos/database/World/Setup/mangosdCreateDB.sql
