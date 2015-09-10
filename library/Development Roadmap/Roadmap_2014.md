@@ -34,9 +34,12 @@ MaNGOS is still in a transition period while we continue to move from the old bu
 * Reorganise the project file system to all mangos branches and backport the Cryptography and Implemention as used in other projects. That way development can continue on Warden.
 * We need some core cleanup perhaps, As in getting the core documented etc.
 * DK rune system rewrite
+
 * New virtual functions in scripts
+
 * Full mingw support
-* Dungeon finder
+
 * Creature_difficulty system rewrite.
 
+* Dungeon finder
 
