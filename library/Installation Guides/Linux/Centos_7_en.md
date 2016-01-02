@@ -93,7 +93,7 @@ Now you should have both the database and the server code ready to go however we
 
     git clone https://github.com/mangosthree/scripts.git server/src/bindings/scripts
 
-Now you will note I am placing the scripts into the `server/src/bindings/scripts` directory this is rather important as we will be setting this as on of our compile options later on. Its important to note here that this is a step that can be hard to understand for a first timer but we wont get into depth in this tutorial about it.
+Now you will note I am placing the scripts into the `server/src/bindings/scripts` directory this is rather important as we will be setting this as one of our compile options later on. Its important to note here that this is a step that can be hard to understand for a first timer but we wont get into depth in this tutorial about it.
 Once all of our downloads are done we can create a few more directories and kick off the compile.
 
     mkdir _build && cd _build
@@ -102,7 +102,7 @@ and here is the huge command of the day:
 
     cmake .. -DTBB_USE_EXTERNAL=1 -DCMAKE_BUILD_TYPE=release -DACE_USE_EXTERNAL=0 -DCMAKE_INSTALL_PREFIX=/opt/mangos -DINCLUDE_BINDINGS_DIR=scripts -DPCH=0 -DCMAKE_CXX_FLAGS="-O3 -march=native" -DCMAKE_C_FLAGS="-O3 -march=native"
 
-Now at first this one line looks pretty scary, but lets take a closer look and break it down to understand what were doing here
+Now at first this one line looks pretty scary, but lets take a closer look and break it down to understand what we're doing here
 
 + -DTBB_USE_EXTERNAL=1 this will instruct the compiler to locate and use the External TBB sources (should have been installed with the "Additional Development" group)
 + -DCMAKE_BUILD_TYPE=release for debugging purposes you may change this to debug
@@ -186,7 +186,7 @@ This will set the password of 'new_password_here' to the user root, it will effe
 
     # /root/SOURCES is the location of all of my git cloned repositories
     cd /root/SOURCES/server/sql/
-    mysql --user=root --host=localhost--password=pass realmd < realmd.sql
+    mysql --user=root --host=localhost --password=pass realmd < realmd.sql
     mysql --user=root --host=localhost --password=pass < create_mysql.sql
     cd /root/SOURCES/server/src/bindings/scripts/sql
     # this should set up all the required scripts
@@ -243,10 +243,10 @@ I copied ahbot.conf.dist.in to ahbot.conf.dist as I like to have the dist files 
     # to copy and leave the .dist files as a back up as I like to do
     ls | sed -e "p;s/\.dist//" | xargs -n2 cp
 
-The ls output is piped to sed , then we use the p flag to print the argument without modifications, in other words , the original name of the file.
+The ls output is piped to sed, then we use the p flag to print the argument without modifications, in other words, the original name of the file.
 The next step is use the substitute command to change file extension.
 
-**NOTE**: We’re using single quotes to enclose literal strings ( the dot is a meta-character if using double quotes escape it with a backslash).
+**NOTE**: We’re using single quotes to enclose literal strings (the dot is a meta-character if using double quotes escape it with a backslash).
 The result is a combined output that consists of a sequence of old_file_name -> new_file_name.
 Finally we pipe the resulting feed through xargs to get the effective rename of the files.
 
