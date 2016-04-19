@@ -142,6 +142,7 @@ Going to the folder Realm/Updates/Rel21 and issuing a ls command I see that late
 	mysql -u root -p realmd < XXXXXX.sql
 
 Repeat this process for characters and mangos database and we're set!
+If, launching mangos, you keep getting errors about database out of date, you can check at the page [**DBupgrade**](../General/Dbupgrade.md)
 
 ### Setup realmd database to accept connections from others than localhost
 To let other players than the same computer that you are running the realmd/mangosd on you need to change a row in the `realmd` database, this can be done this way (connect to mysql using: `mysql -u USER -p`:
