@@ -50,6 +50,7 @@ cmake can use any of the following options, but the one in the example above is 
  * `SOAP` - enabling remote access via SOAP
  * `SCRIPT_LIB_ELUNA` - will compile with support for Eluna scripting
  * `SCRIPT_LIB_SD2` - will compile with support for ScriptDev2 scripts
+
 On develop21 branch there are 2 more options:
  * `SCRIPT_LIB_SD3` - replacing SCRIPT_LIB_SD2
  * `PLAYERBOTS` - enable playerbotsAI, more information on this project @ https://github.com/playerbot/mangos/wiki
@@ -70,14 +71,7 @@ As before, for more recent database, clone the develop branch
 Here you can either choose to create your own user, it will need the following privileges in that case: 
 `SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER TABLES`
 
-If not you'll need to go into the folder where you cloned your server:
-
-    cd ~/mangos/server/sql
-
-and then open the file `create_mysql.sql` in a text editor, ie:
-
-    emacs -nw create_mysql.sql
-
+Go into the folder where you cloned the databse and edit the file /World/Setup/mangosCreateDB.sql
 Well there you'll need to edit the line that looks like this:
 
     CREATE USER 'mangos'@'localhost' IDENTIFIED BY 'mangos';
@@ -91,38 +85,41 @@ database, an example:
 
 With this change done we can save the file, close it and import it into mysql. It will now create three 
 databases: mangos, characters, realmd. If you want to have multiple installations (ie, different cores) 
-you will have to edit the `create_mysql.sql` to create different tables. To import it into mysql we run:
+you will have to edit this file to create different tables. To import it into mysql we run:
 
-    mysql -u root -p < create_mysql.sql
+    mysql -u root -p < mangosdCreateDB.sql
 
-A prompt will come up asking for you password, just type it in and hit enter. Once this is done we need to 
-import the structures into each of the three databases, this we will do like so:
+A prompt will come up asking for you password, the one you provide during mysql installation, just type it in and hit enter. 
+Once this is done we need to import the structures into each of the three databases, this we will do using the LoadDB in each database
+subfolder. For example, to setup structure for realmd you will have to navigate to /Realm/Setup folder and run this command
 
-    mysql -u root -p mangos < mangos.sql
-    mysql -u root -p characters < characters.sql
-    mysql -u root -p realmd < realmd.sql
+	mysql -u root -p realmd < realmdLoadDB.sql
 
-ScriptDev2 also needs its own database if you're including that in your server.
+**Remember, on develop21 branch, databases are named by default as realmd, character0 and mangos0, while on main
+branch they are named realmd, characters and mangos. If needed replace the DB name in followings command before
+<**
 
-    mysql -u root -p < scriptdev2_create_database.sql
-    mysql -u root -p scriptdev2 < scriptdev2_create_structure_mysql.sql
-    mysql -u root -p scriptdev2 < scriptdev2_script_full.sql
+For character database the procedure is the same: you'll have to navigate to /Character/Setup folder and run
 
+	mysql -u root -p characters < characterLoadDB.sql
+
+and for mangos navigate to /World/Setup and run
+
+	mysql -u root -p mangos < mangosdLoadDB.sql
+ 
 After this we will need to fill the mangos database with some real data, ie mobs and all that nice stuff.
 For that we'll need our database repo:
 
-    cd ~/mangos/
-    git clone --recursive http://github.com:mangoszero/database
-    cd database/_tools
-    ./make_full_db.sh
+    cd database/
+    ./make_full_WorldDB.sh
 
 If you get a 'permission denied' error when running make_full_db.sh, make sure the executable bit is set on the file:
 
-    chmod u+x make_full_db.sh
+    chmod u+x make_full_WorldDB.sh
 
 or explicitly run the file contents
 
-    bash make_full_db.sh
+    bash make_full_WorldDB.sh
 
 The script will create a file name full_db.sql which we will import to our database with the same command as earlier:
 
@@ -153,8 +150,6 @@ This step is documented at the page: [**Configuration Files**](Configuration-Fil
 To update source code and database. This is not needed if you are installing for the first time. This is what you do if you are updating an existing server to have the latest changes in the git repository.
 
     cd ~/mangos/server  
-    git pull  
-    cd src/bindings/ScriptDev2  
     git pull  
     cd ~/mangos/database  
     git pull  
