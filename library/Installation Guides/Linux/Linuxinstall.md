@@ -3,12 +3,14 @@
 
 ----------
 
-This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory.
+This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory. Tested and working on Ubuntu Server 15.04 64 bit.
 
 ## Preparation  
 The following packages are probably needed to compile and run MaNGOS-zero:  
 
 > gcc g++ automake git-core autoconf make patch libmysql++-dev mysql-server libtool libssl-dev grep binutils zlibc libc6 libbz2-dev cmake
+
+When mysql-server is installed a password for the root users will be requested. DON'T FORGET IT.
 
 You will also need a WoW-client to extract map files, dbc files and some other stuff.
 
