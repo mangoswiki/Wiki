@@ -125,7 +125,23 @@ The script will create a file name full_db.sql which we will import to our datab
 
     mysql -u root -p mangos < full_db.sql
 
-And we're set!
+The last thing to do is to import the update. You can check if anything has to be imported by checking the table db_version present in every databse and comparing it to Updates folder. For example, for realmd database, you can run 
+the following command
+
+	mysql -u root -p
+	mysql> use realmd;
+	mysql> select * from db_version;
+
+In the comment column you will see the latest update applied to your database. Now you can navigate to Realm/Updates
+folder and check if anything past that is applied. In my case, for branch develop21, the latter query returned to me
+
+>Base Database from 20150409 to Rel21_1_2
+
+Going to the folder Realm/Updates/Rel21 and issuing a ls command I see that latest updates available is Rel21_1_2_dbdocs_updates.sql, so I don't have to apply anything! If one of the sql file in the folder need to be applied, the command is the same as always
+
+	mysql -u root -p realmd < XXXXXX.sql
+
+Repeat this process for characters and mangos database and we're set!
 
 ### Setup realmd database to accept connections from others than localhost
 To let other players than the same computer that you are running the realmd/mangosd on you need to change a row in the `realmd` database, this can be done this way (connect to mysql using: `mysql -u USER -p`:
