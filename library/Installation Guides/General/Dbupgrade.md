@@ -9,7 +9,9 @@ So you are looking to upgrade your database to the newer version....
 
 2) Change directory to the folder where you cloned the database
 
-3) type `git pull`
+3a) type `git pull`
+3b) type `git submodule init`
+3c) type `git submodule update`
 
 4) run the server and an error similar to the following will be shown:-
 

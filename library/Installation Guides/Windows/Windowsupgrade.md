@@ -11,9 +11,9 @@ So you are looking to upgrade your server to the latest and greatest release....
 
 3) type `git pull`
 
-4) Change directory to the folder where you cloned the scripts sourcecode
+4) type `git submodule init`
 
-5) type `git pull`
+5) type `git submodule update`
 
 6) Compile the server sourcecode and copy the files to your server
 
@@ -21,7 +21,9 @@ So you are looking to upgrade your server to the latest and greatest release....
 
 8) Change directory to the folder where you cloned the database
 
-9) type `git pull`
+9a) type `git pull`
+9b) type `git submodule init`
+9c) type `git submodule update`
 
 10) run the server and an error similar to the following will be shown:-
 

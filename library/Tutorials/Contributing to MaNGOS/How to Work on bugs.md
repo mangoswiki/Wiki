@@ -25,6 +25,8 @@ Now that you've made your changes it's time to get them into a patch. We need to
 <pre>$ git checkout master
 Switched to branch "master"
 $ git pull
+$ git submodule init
+$ git submodule update
 ...
 $ git checkout make_mangos_scale
 Switched to branch "make_mangos_scale"

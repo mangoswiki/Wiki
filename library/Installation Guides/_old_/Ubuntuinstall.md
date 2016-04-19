@@ -48,10 +48,13 @@ To update source code and database
 
 > cd ~/mangos/server  
 git pull  
-cd src/bindings/ScriptDev2  
-git pull  
+git submodule init
+git submodule update
+
 cd ~/mangos/database  
 git pull  
+git submodule init
+git submodule update
 
 ### Starting mangosd and realmd  
 mangosd and realmd can be started from the terminal from the /opt/mangos-server/bin directory by typing

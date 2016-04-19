@@ -4,7 +4,8 @@
 ----------
 ## How to Update?
 ### Updating MaNGOS source
-First off you should have git installed. Then you can `cd` into your mangos source folder. For example: `cd /c/MaNGOS/` When you are inside of there you type `git pull`.
+First off you should have git installed. Then you can `cd` into your mangos source folder. For example: `cd /c/MaNGOS/` When you are inside of there you type `git pull` followed by `git submodule init` then `git submodule update`
+
  
 ### Updating database
 After updating MaNGOS you might need to update the database structure.
@@ -13,9 +14,6 @@ After updating MaNGOS you might need to update the database structure.
  If it does you must apply all updates from the sql update folder which is "after" what update mangos tells you you currently have. 
  
  Note that you should apply the updates on the correct databases (See filenames in updates folder)
-
-### Updating Scripts
-As with updating MaNGOS you must `cd` into the git repository, for example `cd /c/MaNGOS/src/bindings/ScriptDev2`. Then you type `git pull`.
 
 **Note:** 
 After both the MaNGOS and Scripts update procedure you must recompile the core.

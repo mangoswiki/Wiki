@@ -184,6 +184,8 @@ To update source code and database. This is not needed if you are installing for
     git submodule update
     cd ~/mangos/database  
     git pull  
+    git submodule init
+    git submodule update
 
 After pulling the most recent code from git, you will need to compile the source code again as described in the 'Compile MaNGOS' section and restart mangosd and realmd before the changes will be reflected in your server.
 
