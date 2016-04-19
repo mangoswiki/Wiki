@@ -153,10 +153,10 @@ Beware of typo mistake, the values you can change are:
 This will change the first realm that you have to listen for connections on more than just **localhost**, if you're on a LAN and want to play with your friends this should be changed to the local ip of the computer that is running the server, this can be acquired by running `ifconfig` or `ip addr` depending on your distro. On the other hand, if you want your friends around the globe to connect you would have to open some ports and set the address to your external ip which can be found by for example going to http://whatismyip.com
 
 ## Extracting data from the client
-This step is documented at the page: [**Extract Game Assets**](Installation%20Guides/General/Extracting-Game-Assets)
+This step is documented at the page: [**Extract Game Assets**](../General/Extracting-Game-Assets)
 
 ## Configuration Files
-This step is documented at the page: [**Configuration Files**](Installation%20Guides/General/Configuration-Files)
+This step is documented at the page: [**Configuration Files**](../General/Configuration-Files)
 
 ## Updating  
 To update source code and database. This is not needed if you are installing for the first time. This is what you do if you are updating an existing server to have the latest changes in the git repository.
