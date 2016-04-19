@@ -113,7 +113,7 @@ For that we'll need our database repo:
     cd database/
     ./make_full_WorldDB.sh
 
-If you get a 'permission denied' error when running make_full_db.sh, make sure the executable bit is set on the file:
+If you get a 'permission denied' error when running make_full_WorldDB.sh, make sure the executable bit is set on the file:
 
     chmod u+x make_full_WorldDB.sh
 
@@ -137,6 +137,18 @@ An example of how it would look with a real address:
 
     use realmd;
     update realmlist set address = '192.168.1.10' where id = 1;
+
+On branch develop21 at the moment, the realmlist table comes empty, so if the previous query gives error you'll have to insert
+manually a row in the table. On command line you can do it in this way:
+
+	mysql -u root -p
+	mysql> use realmd;
+	mysql> INSERT INTO realmlist (id,name,address,localAddress,localSubnetMask,port,icon,realmflags,timezone,allowedSecurityLevel,population,realmbuilds) VALUES (1,"mangos-zero","192.168.1.10","127.0.0.1","255.255.255.0",8085,0,2,0,0,0,"5875 6005 6141");
+
+Beware of typo mistake, the values you can change are:
+ * "mangos-zero", which is the name you want to give to the realm
+ * "192.168.1.10", as explained before
+ * 8085, which is the default port for the realmd
 
 This will change the first realm that you have to listen for connections on more than just **localhost**, if you're on a LAN and want to play with your friends this should be changed to the local ip of the computer that is running the server, this can be acquired by running `ifconfig` or `ip addr` depending on your distro. On the other hand, if you want your friends around the globe to connect you would have to open some ports and set the address to your external ip which can be found by for example going to http://whatismyip.com
 
