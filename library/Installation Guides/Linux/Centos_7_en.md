@@ -449,3 +449,4 @@ In the event that your RPM Distro has a firewall installed here is a list of com
     iptables -A INPUT -p tcp --dport 3724 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
     iptables -A INPUT -p tcp --dport 80 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
     iptables -A INPUT -p tcp --dport 7878 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+

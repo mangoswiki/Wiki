@@ -16,7 +16,7 @@
     .blackborder
     {
         border-color: #000000;
-        background-color: #444444;
+        background-color: #333333;
         border-width: 2px;
         padding: 3px;
         border-style: solid;
@@ -128,31 +128,31 @@
     .dosline
     {
         border-color: #C0C0C0;
-        background-color: #444444;
+        background-color: #333333;
         border-width: 0px;
         padding: 0px;
         border-style: solid;
         color: #FFFFFF;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
     .doslinered
     {
         border-color: #C0C0C0;
-        background-color: #444444;
-        color: #FF9955;
+        background-color: #333333;
+        color: #FEEEFF;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
     .doslineyellow
     {
         border-color: #C0C0C0;
-        background-color: #444444;
+        background-color: #333333;
         color: #FFFF88;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
 
@@ -162,7 +162,7 @@
 
 ----------
 
-##How to Obtain the MaNGOS sourcecode
+##Downloading the MaNGOS sourcecode
  
 <div class='blueline'>Important Things to remember</div>
 <div class='blueborder'>There are Five MaNGOS cores, each designed to support a specific version of WOW<br/>
@@ -171,7 +171,7 @@
 <td align=centre width='20%'><b>Core</b></td><td width='30%'><b>Supporting</b></td><td><b>Client Version</b></td>
 </tr>
 <tr>
-<td align=centre>MangosZero</td><td>Vanilla</td><td>1.12.1(5875), 1.12.2(6005) & 1.12.3(6141).</td>
+<td align=centre>MangosZero</td><td>Vanilla</td><td>1.12.1(5875), 1.12.2(6005) &amp; 1.12.3(6141).</td>
 </tr>
 <tr>
 <td align=centre>MangosOne</td><td>The Burning Crusade</td><td>2.4.3(8606).</td>
@@ -187,24 +187,29 @@
 </tr>
 </table>
 </div>
-<div class='yellowborder'><b>NOTE: </b>The default branch of all the repos is always the latest released version, however between releases other branches contain the ongoing development work.</div>
+<div class='yellowborder'><b>** PLEASE NOTE **</b><br/>The default branch of all the repos is always the latest released version, however between releases other branches contain the ongoing development work.</div>
+
+In the examples below, we are using MangosZero !
+
+Open your favourite git command line util ie. 'git bash' or 'git shell'
+<br/>Then type the commands below:   
 
 ###Cloning the default branch of the repos
 
 <div class='blackline'><b>Server Source.</b> Type:</div>
-<div class='dosline'><span class='doslineyellow'>&nbsp;&nbsp;git clone</span> <span class='doslinered'>https://gitub.com/mangoszero/server.git</span> <span class='doslineyellow'>--recursive</span></div><br />
+<div class='dosline'><span class='doslineyellow'>&nbsp;<b>git clone</span> <span class='doslinered'>https://github.com/mangoszero/server.git</span> <span class='doslineyellow'>--recursive</span></b></div><br />
 
 <div class='blackline'><b>Database.</b> Type:</div>
-<div class='dosline'><span class='doslineyellow'>&nbsp;&nbsp;git clone</span> <span class='doslinered'>https://gitub.com/mangoszero/database.git</span> <span class='doslineyellow'>--recursive</span></div><br />
-The server and database folders then contain the contents of each repo.
+<div class='dosline'><span class='doslineyellow'>&nbsp;<b>git clone</span> <span class='doslinered'>https://github.com/mangoszero/database.git</span> <span class='doslineyellow'>--recursive</span></b></div><br />
+These will create a server and database folder, which then contain the contents of each repo.
 
 ###Cloning a specific branch of the repos
 
 If you want the try out the latest development work in progress, they are available.
 
 <div class='blackline'><b>Server Source.</b> Using branch develop21. Type:</div>
-<div class='dosline'><span class='doslineyellow'>&nbsp;&nbsp;git clone</span> <span class='doslinered'>https://gitub.com/mangoszero/server.git</span> <span class='doslineyellow'>--recursive -b develop21</span></div><br />
+<div class='dosline'><span class='doslineyellow'>&nbsp;<b>git clone</span> <span class='doslinered'>https://github.com/mangoszero/server.git</span> <span class='doslineyellow'>--recursive -b develop21</span></b></div><br />
 
 <div class='blackline'><b>Database.</b> Using branch develop21. Type:</div>
-<div class='dosline'><span class='doslineyellow'>&nbsp;&nbsp;git clone</span> <span class='doslinered'>https://gitub.com/mangoszero/database.git</span> <span class='doslineyellow'>--recursive -b develop21</span></div><br />
-The server and database folders then contain the contents of each repo for this branch.
+<div class='dosline'><span class='doslineyellow'>&nbsp;<b>git clone</span> <span class='doslinered'>https://github.com/mangoszero/database.git</span> <span class='doslineyellow'>--recursive -b develop21</span></b></div><br />
+These will create a server and database folder, which then contain the contents of each repo for this branch.

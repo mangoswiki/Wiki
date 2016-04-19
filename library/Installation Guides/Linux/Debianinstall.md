@@ -16,8 +16,8 @@ NOTE: If you wish to use submodules with your server, you can enable or disable 
 (0=disabled 1=enabled)
     
     -DBUILDTOOLS=1 - to build the Extraction Tools
-    -DENABLE_LIB_SD2=1 - to Enable SD2
-    -DENABLE_LIB_ELUNA=1 - to Enable Eluna
+    -DSCRIPT_LIB_SD2=1 - to Enable SD2
+    -DSCRIPT_LIB_ELUNA=1 - to Enable Eluna
     -DSOAP=1 - to Enable SOAP
     
 ###1. Fetching the dependencies.
@@ -83,7 +83,7 @@ Now we can import the databases for realmd, mangos and characters. This can be d
     
     mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdCreateDB.sql
     mysql -u root -p realmd < /home/mangos/database/Realm/Setup/realmdLoadDB.sql
-	mysql -u root -p realmd < /home/mangos/database/Tools/updateRealm.sql
+    mysql -u root -p realmd < /home/mangos/database/Tools/updateRealm.sql
     mysql -u root -p characters < /home/mangos/database/Character/Setup/characterCreateDB.sql
     mysql -u root -p characters < /home/mangos/database/Character/Setup/characterLoadDB.sql
     mysql -u root -p mangos < /home/mangos/database/World/Setup/mangosdCreateDB.sql

@@ -1,16 +1,17 @@
 ----
 #Welcome to the MaNGOS Wiki
 ----
-**Main Wiki**
-----
-For browsing the Wiki, it is located at the following location:
-
-* [**MaNGOS Wiki**](http://getmangos.eu/wiki)  
-
 **Official Websites**
 ----
 
 * [**Official MaNGOS Site**](https://getmangos.eu/)  
+* [**Official MaNGOS Community Forum**](https://www.getmangos.eu/home.php)  
+
+**Main Wiki**
+----
+For browsing the Wiki, it is located at the following location:
+
+* [**Wiki Home**](http://getmangos.eu/wiki)  
 
 ---
 Proudly brought to you by:

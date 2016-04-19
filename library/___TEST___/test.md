@@ -15,7 +15,7 @@
     .blackborder
     {
         border-color: #000000;
-        background-color: #444444;
+        background-color: #333333;
         border-width: 2px;
         padding: 3px;
         border-style: solid;
@@ -127,13 +127,13 @@
     .dosline
     {
         border-color: #C0C0C0;
-        background-color: #444444;
+        background-color: #333333;
         border-width: 2px;
         padding: 3px;
         border-style: solid;
         color: #FFFFFF;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
         border-top-left-radius: 10px 5px;
         border-top-right-radius: 10px;
@@ -143,19 +143,19 @@
     .doslinered
     {
         border-color: #C0C0C0;
-        background-color: #444444;
-        color: #FF9955;
+        background-color: #333333;
+        color: #FEEEFF;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
     .doslineyellow
     {
         border-color: #C0C0C0;
-        background-color: #444444;
+        background-color: #333333;
         color: #FFFF88;
         font-family: courier, sans-serif;
-        font-size: 12px;
+        font-size: 14px;
         text-align: left;
     }
 

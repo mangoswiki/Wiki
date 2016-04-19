@@ -179,7 +179,9 @@ This step is documented at the page: [**Configuration Files**](../General/Config
 To update source code and database. This is not needed if you are installing for the first time. This is what you do if you are updating an existing server to have the latest changes in the git repository.
 
     cd ~/mangos/server  
-    git pull  
+    git pull
+    git submodule init
+    git submodule update
     cd ~/mangos/database  
     git pull  
 
