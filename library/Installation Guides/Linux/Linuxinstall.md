@@ -3,7 +3,7 @@
 
 ----------
 
-This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory. Tested and working on Ubuntu Server 15.04 64 bit.
+This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory. Tested and working on Ubuntu Server 15.04 64 bit, I assume is the same for other Debian-like systems. For different distros the main difference is in the preparation section, since you will have to track correspondents packages in other repos.
 
 ## Preparation  
 The following packages are probably needed to compile and run MaNGOS-zero:  
@@ -21,6 +21,10 @@ Get the source code of MaNGOS and patch ScriptDev2 in.  Create a directory calle
     cd mangos  
     git clone --recursive http://github.com/mangoszero/server.git 
 
+This command will clone code from the master repo. If you are interested in most up to date code, you will have to clone branch develop21
+
+	git clone --recursive http://github.com/mangoszero/server.git -b develop21
+
 ### Compile MaNGOS  
 Compiling (with an install dir of /opt/mangos-server)  Note:  If /opt/mangos-server does not exist, create it and chown to the user you compile your code with:
 
@@ -30,19 +34,25 @@ Now lets create an object-dir and compile inside it
 
     mkdir obj
     cd obj
-    cmake .. -DCMAKE_INSTALL_PREFIX=/opt/mangos-server -DINCLUDE_BINDINGS_DIR=scripts
+    cmake .. -DCMAKE_INSTALL_PREFIX=/opt/mangos-server
     make  
     make install  
 
-cmake can use any of the following options, but the two in the example above are recommended. Each option must be prefixed with `-D`:
+cmake can use any of the following options, but the one in the example above is recommended. Each option must be prefixed with `-D`:
  * `CMAKE_INSTALL_PREFIX` - decides where mangos will be installed
+ * `CONF_DIR` - Path to the configuration files, can be absolute or relative
  * `PCH` - if this is used precompiled headers will be used
  * `DEBUG` - build in debug mode, easier to make use of data when it crashes etc
- * `TBB_USE_EXTERNAL` - use external TBB, use only if you actually have it installed already
  * `USE_STD_MALLOC` - use the `malloc` given by the std libs instead of the TBB library
  * `ACE_USE_EXTERNAL` - use external ACE library instead of the one given, use version around 6.0.3 for it
  to be compatible
- * `INCLUDE_BINDINGS_DIR` - Valid option as of 18.0. Causes the compiler to include a c++ scripting library. Set this option to 'scripts' to include the ScriptDev2 code found in server/src/bindings/scripts/. Any folder name in the server/src/bindings/ folder (normally only 'scripts' and 'universal') can be used as the value for this option.
+ * `BUILD_TOOLS` - enabling this will build the software needed for the extraction of game assets
+ * `SOAP` - enabling remote access via SOAP
+ * `SCRIPT_LIB_ELUNA` - will compile with support for Eluna scripting
+ * `SCRIPT_LIB_SD2` - will compile with support for ScriptDev2 scripts
+On develop21 branch there are 2 more options:
+ * `SCRIPT_LIB_SD3` - replacing SCRIPT_LIB_SD2
+ * `PLAYERBOTS` - enable playerbotsAI, more information on this project @ https://github.com/playerbot/mangos/wiki
 
 ## Database
 
