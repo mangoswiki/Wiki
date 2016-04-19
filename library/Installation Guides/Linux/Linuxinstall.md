@@ -3,7 +3,7 @@
 
 ----------
 
-This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory. Tested and working on Ubuntu Server 15.04 64 bit, I assume is the same for other Debian-like systems. For different distros the main difference is in the preparation section, since you will have to track correspondents packages in other repos.
+This Ubuntu Install Guide is thanks to Krampf and his MaNGOS Community Article.  The following steps assume you are at a Console in your Home Directory. Tested and working on Ubuntu Server 15.04 at 64 bit, I assume is the same for other Debian-like systems. For different distros the main difference is in the preparation section, since you will have to track correspondents packages in other repos.
 
 ## Preparation  
 The following packages are probably needed to compile and run MaNGOS-zero:  
@@ -60,6 +60,10 @@ On develop21 branch there are 2 more options:
 
     cd ~/mangos  
     git clone --recursive http://github.com/mangoszero/database.git  
+
+As before, for more recent database, clone the develop branch
+
+	git clone --recursive http://github.com/mangoszero/database.git -b develop21
 
 ### Add users and create the actual database. 
 
