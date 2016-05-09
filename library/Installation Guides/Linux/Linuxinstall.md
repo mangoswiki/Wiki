@@ -39,21 +39,21 @@ Now lets create an object-dir and compile inside it
     make install  
 
 cmake can use any of the following options, but the one in the example above is recommended. Each option must be prefixed with `-D`:
- * `CMAKE_INSTALL_PREFIX` - decides where mangos will be installed
- * `CONF_DIR` - Path to the configuration files, can be absolute or relative
- * `PCH` - if this is used precompiled headers will be used
- * `DEBUG` - build in debug mode, easier to make use of data when it crashes etc
- * `USE_STD_MALLOC` - use the `malloc` given by the std libs instead of the TBB library
- * `ACE_USE_EXTERNAL` - use external ACE library instead of the one given, use version around 6.0.3 for it
+* `CMAKE_INSTALL_PREFIX` - decides where mangos will be installed
+* `CONF_DIR` - Path to the configuration files, can be absolute or relative
+* `PCH` - if this is used precompiled headers will be used
+* `DEBUG` - build in debug mode, easier to make use of data when it crashes etc
+* `USE_STD_MALLOC` - use the `malloc` given by the std libs instead of the TBB library
+* `ACE_USE_EXTERNAL` - use external ACE library instead of the one given, use version around 6.0.3 for it
  to be compatible
- * `BUILD_TOOLS` - enabling this will build the software needed for the extraction of game assets
- * `SOAP` - enabling remote access via SOAP
- * `SCRIPT_LIB_ELUNA` - will compile with support for Eluna scripting
- * `SCRIPT_LIB_SD2` - will compile with support for ScriptDev2 scripts
+* `BUILD_TOOLS` - enabling this will build the software needed for the extraction of game assets
+* `SOAP` - enabling remote access via SOAP
+* `SCRIPT_LIB_ELUNA` - will compile with support for Eluna scripting
+* `SCRIPT_LIB_SD2` - will compile with support for ScriptDev2 scripts
 
 On develop21 branch there are 2 more options:
- * `SCRIPT_LIB_SD3` - replacing SCRIPT_LIB_SD2
- * `PLAYERBOTS` - enable playerbotsAI, more information on this project @ https://github.com/playerbot/mangos/wiki
+* `SCRIPT_LIB_SD3` - replacing SCRIPT_LIB_SD2
+* `PLAYERBOTS` - enable playerbotsAI, more information on this project @ https://github.com/playerbot/mangos/wiki
 
 ## Database
 
