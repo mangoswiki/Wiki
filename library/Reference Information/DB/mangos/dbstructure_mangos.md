@@ -31,7 +31,7 @@
 </tr>
 <tr>
 <td align='center'>areatrigger_involvedrelation</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/areatrigger_involvedrelation.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/areatrigger_involvedrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/areatrigger_involvedrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/areatrigger_involvedrelation.md'><b>VIEW</b></a></td>
@@ -159,7 +159,7 @@
 </tr>
 <tr>
 <td align='center'>creature_involvedrelation</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/creature_involvedrelation.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/creature_involvedrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/creature_involvedrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/creature_involvedrelation.md'><b>VIEW</b></a></td>
@@ -239,7 +239,7 @@
 </tr>
 <tr>
 <td align='center'>creature_questrelation</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/creature_questrelation.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/creature_questrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/creature_questrelation.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/creature_questrelation.md'><b>VIEW</b></a></td>
@@ -282,6 +282,14 @@
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/custom_texts.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/custom_texts.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/custom_texts.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
+<td align='center'>-</td>
+</tr>
+<tr>
+<td align='center'>db_scripts</td>
+<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/db_scripts.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
+<td align='center'>-</td>
 <td align='center'>-</td>
 <td align='center'>-</td>
 </tr>
@@ -351,7 +359,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_creature_death</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_creature_death.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_creature_death.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_creature_death.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_creature_death.md'><b>VIEW</b></a></td>
@@ -359,7 +367,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_creature_movement</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_creature_movement.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_creature_movement.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_creature_movement.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_creature_movement.md'><b>VIEW</b></a></td>
@@ -367,7 +375,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_event</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_event.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_event.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_event.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_event.md'><b>VIEW</b></a></td>
@@ -375,7 +383,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_gossip</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_gossip.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_gossip.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_gossip.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_gossip.md'><b>VIEW</b></a></td>
@@ -383,7 +391,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_go_template_use</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_go_template_use.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_go_template_use.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_go_template_use.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_go_template_use.md'><b>VIEW</b></a></td>
@@ -391,7 +399,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_go_use</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_go_use.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_go_use.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_go_use.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_go_use.md'><b>VIEW</b></a></td>
@@ -399,7 +407,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_quest_end</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_quest_end.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_quest_end.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_quest_end.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_quest_end.md'><b>VIEW</b></a></td>
@@ -407,7 +415,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_quest_start</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_quest_start.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_quest_start.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_quest_start.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_quest_start.md'><b>VIEW</b></a></td>
@@ -415,7 +423,7 @@
 </tr>
 <tr>
 <td align='center'>dbscripts_on_spell</td>
-<td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSZero/dbscripts_on_spell.md'><b>VIEW</b></a></td>
+<td align='center'>-</td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSOne/dbscripts_on_spell.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSTwo/dbscripts_on_spell.md'><b>VIEW</b></a></td>
 <td align='center'><a href='/wiki/Reference%20Information/DB/mangos/MaNGOSThree/dbscripts_on_spell.md'><b>VIEW</b></a></td>
