@@ -5,7 +5,7 @@
 ----
 
 * [**Official MaNGOS Site**](https://getmangos.eu/)  
-* [**Official MaNGOS Community Forum**](https://www.getmangos.eu/home.php)  
+* [**Official MaNGOS Community Forum**](https://www.getmangos.eu/forums/)  
 
 **Main Wiki**
 ----
